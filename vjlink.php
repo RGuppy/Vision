@@ -258,7 +258,7 @@ if(isset($_SESSION['ssize'])){
 	}
 	/*			
 				***Design by Ilya "Pasha" Pashkov***
-				***Code by Igor "Guppy" Murzaev
+				***Code by Igor "Guppy" Murzaev***
 					26.05.16
 	*/
 	if (isset($_POST['Rejim'])) {
