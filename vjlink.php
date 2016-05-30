@@ -1,21 +1,3 @@
-	<?php 
-	/*  Copyright 2016  Guppy  (email: igor87111@gmail.com)
-
-	    This program is free software; you can redistribute it and/or modify
-	    it under the terms of the GNU General Public License as published by
-	    the Free Software Foundation; either version 2 of the License, or
-	    (at your option) any later version.
-
-	    This program is distributed in the hope that it will be useful,
-	    but WITHOUT ANY WARRANTY; without even the implied warranty of
-	    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	    GNU General Public License for more details.
-
-	    You should have received a copy of the GNU General Public License
-	    along with this program; if not, write to the Free Software
-	    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
-	*/
-	?>
 	<style type="text/css">
 	.start {
 	position:fixed;
@@ -63,12 +45,12 @@
 		border-radius:3px;
 	}
 	#solevarnya{
-		background: #32215C;
-		color:#F2F504;
+		background:black;
+		color:white;
 	}
 	#papich{
-		color:#32215C;
-		background: #F2F504;
+		color:white;
+		background: blue;
 		padding-left:25px;
 		padding-right:25px;
 	}
@@ -123,7 +105,7 @@
 		<a href="#close" title="Закрыть" class="close">X</a>
 		<font id="za">Выбор шрифта</font>:
 		<form method="post">
-		<input type="submit" name="1" class="vjlink" style="font-size:15px" value="Обычный шрифт">
+		<input type="submit" name="1" class="vjlink" style="font-size:13px" value="Обычный шрифт">
 		<input type="submit" name="15" class="vjlink" style="font-size:15px" value="A">
 		<input type="submit" name="20" class="vjlink" style="font-size:20px" value="A">
 		<input type="submit" name="25" class="vjlink" style="font-size:25px" value="A">
@@ -136,6 +118,22 @@
 		</div>
 	</div>
 	<?php
+	/*  Copyright 2016  Guppy  (email: igor87111@gmail.com)
+
+	    This program is free software; you can redistribute it and/or modify
+	    it under the terms of the GNU General Public License as published by
+	    the Free Software Foundation; either version 2 of the License, or
+	    (at your option) any later version.
+
+	    This program is distributed in the hope that it will be useful,
+	    but WITHOUT ANY WARRANTY; without even the implied warranty of
+	    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	    GNU General Public License for more details.
+
+	    You should have received a copy of the GNU General Public License
+	    along with this program; if not, write to the Free Software
+	    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+	*/
 	if(isset($_POST['15']))
 	{
 		$_SESSION['ssize']=1;
@@ -158,6 +156,18 @@ if(isset($_SESSION['ssize'])){
 		echo "<style>
 		body{
 		font-size:15px !important;
+		}
+		#date{
+			font-size:15px !important;
+		}
+		.home{
+			font-size:15px !important;
+		}
+		.entry-meta{
+		 font-size:15px !important;
+		}
+		span{
+			font-size:15px !important;
 		}
 		#access .menu li a{
 		font-size:15px !important;
@@ -186,7 +196,16 @@ if(isset($_SESSION['ssize'])){
 		if($_SESSION['ssize']==2){
 		echo "<style>
 		body{
-		font-size:20px !important;
+		font-size:17px !important;
+		}
+		#date{
+			font-size:16px !important;
+		}
+		.entry-meta{
+		 font-size:18px !important;
+		}
+		.home{
+			font-size:18px !important;
 		}
 		header .logo{
 		display:none !important;
@@ -212,13 +231,25 @@ if(isset($_SESSION['ssize'])){
 		#side-navi a{
 		font-size:20px !important;
 		}
+		span{
+			font-size:18px !important;
+		}
 		</style>";
 		}
 		
 		if($_SESSION['ssize']==3){
 			echo "<style>
 		body{
-		font-size:22px !important;
+		font-size:19px !important;
+		}
+		.home{
+			font-size:20px !important;
+		}
+		#date{
+			font-size:17px !important;
+		}
+		.entry-meta{
+		 font-size:20px !important;
 		}
 		#explanation{
 		font-size:22px !important;
@@ -250,6 +281,9 @@ if(isset($_SESSION['ssize'])){
 		#side-navi a{
 		font-size:25px !important;
 		}
+		span{
+			font-size:20px !important;
+		}
 		</style>";
 		}
 		if($_SESSION['ssize']==4){
@@ -258,7 +292,7 @@ if(isset($_SESSION['ssize'])){
 	}
 	/*			
 				***Design by Ilya "Pasha" Pashkov***
-				***Code by Igor "Guppy" Murzaev***
+				***Code by Igor "Guppy" Murzaev
 					26.05.16
 	*/
 	if (isset($_POST['Rejim'])) {
@@ -289,6 +323,7 @@ if(isset($_SESSION['ssize'])){
 	-ms-filter: grayscale(100%);
 	-o-filter: grayscale(100%);
 	filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+	filter: grayscale(100%);
 	}
 	#icon_fold{
  	grayscale(100%);
@@ -305,6 +340,7 @@ if(isset($_SESSION['ssize'])){
 	-ms-filter: grayscale(100%);
 	-o-filter: grayscale(100%);
 	filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+	filter: grayscale(100%);
 	}
 	#tape-wrap{
 	background: none !important;
@@ -338,6 +374,33 @@ if(isset($_SESSION['ssize'])){
 	}
 	 .page .advanced_recent_posts_widget{
 	 	border-top: 4px solid #000000;
+	 }
+	 a.rollover:hover{
+		 background:url(http://www.akvt.ru/wp-content/uploads/2014/10/22.png) !important;
+	 }
+	 a.rollover2:hover{
+		 background:url(http://www.akvt.ru/wp-content/uploads/2014/10/12.png) !important;
+	 }
+	 a.rollover3:hover{ 
+	 background:url(http://www.akvt.ru/wp-content/uploads/2014/10/32.png) !important;
+	 }
+	 a.rollover4:hover{
+		 background:url(http://www.akvt.ru/wp-content/uploads/2014/10/52.png) !important;
+	 }
+	 a.rollover5:hover{
+		 background:url(http://www.akvt.ru/wp-content/uploads/2014/10/42.png) !important;
+	 }
+	 #content_page, #content_single{
+		 border-top: 4px solid #000000;
+	 }
+	 #side-navi .current_page_item{
+		 background: none;
+	 }
+	 #side-navi .current_page_item a{
+		 color:black;
+	 }
+	 #side-navi div{
+		 border-top: 4px solid #000000;
 	 }
 	 a{
 	 	color:black;
