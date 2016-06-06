@@ -134,6 +134,12 @@
 	    along with this program; if not, write to the Free Software
 	    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 	*/
+	
+	/*			
+				***Design by Ilya "Pasha" Pashkov***
+				***Code by Igor  "Guppy"  Murzaev***
+					26.05.16
+	*/
 	if(isset($_POST['15']))
 	{
 		$_SESSION['ssize']=1;
