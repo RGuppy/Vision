@@ -1,8 +1,8 @@
 	<style type="text/css">
 	.start {
 	position:fixed;
-	left:9%;
-	top:100px;
+	right:10%;
+	top:60px;
 	z-index: 99999;
 	}
 	.modalDialog {
@@ -44,19 +44,22 @@
 		border:none;
 		border-radius:3px;
 	}
+	.buter{
+		cursor:pointer;
+	}
 	#solevarnya{
 		background:black;
 		color:white;
 	}
 	#papich{
 		color:white;
-		background: blue;
+		background: #31659E;
 		padding-left:25px;
 		padding-right:25px;
 	}
 	.close {
-		background: #606061;
-		color: #FFFFFF;
+		background: #31659E;
+		color: black !important;
 		line-height: 25px;
 		position: absolute;
 		right: -12px;
@@ -79,24 +82,21 @@
 		 color: blue;
 	}
 	.vjlink:hover{
-		color: red;
+		cursor:pointer;
 	}
-	.close:hover { background: #00d9ff; }
+	.close:hover { background: black;
+		color:white !important;
+		}
 	</style>
 	<a class=start href=#openModal>
-	<svg width="30px" height="15px" viewBox="0 0 214 103" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="45px" height="45px" viewBox="0 0 256 193" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Версия для слабовидящих</title>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Oval-1" transform="translate(7.000000, 5.000000)">
-            <path d="M100,93 C155.228475,93 200,49.5 200,49.5 C200,49.5 155.228475,-5.68434189e-14 100,-5.68434189e-14 C44.771525,-5.68434189e-14 0,49.5 0,49.5 C0,49.5 44.771525,93 100,93 Z" stroke="#000000" stroke-width="10"></path>
-            <ellipse id="Oval-2" stroke="#000000" stroke-width="7" cx="100.5" cy="45.5" rx="35.5" ry="35.5"></ellipse>
-            <g id="Group-2" stroke-width="1" fill-rule="evenodd" transform="translate(75.000000, 20.000000)">
-                <g id="Group">
-                    <path d="M24,3 C12.4020203,3 3,13.0258635 3,25.3933929" id="Oval-3" stroke="#000000" stroke-width="6"></path>
-                    <ellipse id="Oval-4" fill="#000000" cx="24.25" cy="3" rx="2.81332982" ry="3"></ellipse>
-                    <ellipse id="Oval-4-Copy" fill="#000000" cx="3" cy="25" rx="3" ry="3.19905613"></ellipse>
-                </g>
-            </g>
-        </g>
+        <path d="M58,185 C85.6142375,185 108,162.614237 108,135 C108,107.385763 85.6142375,85 58,85 C30.3857625,85 8,107.385763 8,135 C8,162.614237 30.3857625,185 58,185 Z" id="Oval-1" stroke="#000000" stroke-width="15"></path>
+        <circle id="Oval-1-Copy" stroke="#000000" stroke-width="15" cx="198" cy="135" r="50"></circle>
+        <path d="M108,129 C108,129 114.206897,120 128,120 C141.793103,120 148,129 148,129" id="Line" stroke="#000000" stroke-width="10" stroke-linecap="square"></path>
+        <path d="M21.0679066,135.548641 C21.0679066,135.548641 18.3540513,21.1015819 19.0679066,15.5486407 C20.1251355,10.0584446 25.0679066,7.54864073 25.0679066,7.54864073" id="Line" stroke="#000000" stroke-width="10" stroke-linecap="square" transform="translate(22.067907, 71.548641) rotate(10.000000) translate(-22.067907, -71.548641) "></path>
+        <path d="M233.067907,135.548641 C233.067907,135.548641 230.354051,21.1015819 231.067907,15.5486407 C232.125136,10.0584446 237.067907,7.54864073 237.067907,7.54864073" id="Line-Copy-2" stroke="#000000" stroke-width="10" stroke-linecap="square" transform="translate(234.067907, 71.548641) scale(-1, 1) rotate(10.000000) translate(-234.067907, -71.548641) "></path>
     </g>
 </svg>
 	</a>
@@ -290,11 +290,6 @@ if(isset($_SESSION['ssize'])){
 			
 		}
 	}
-	/*			
-				***Design by Ilya "Pasha" Pashkov***
-				***Code by Igor "Guppy" Murzaev
-					26.05.16
-	*/
 	if (isset($_POST['Rejim'])) {
 	if($_POST['Rejim']=="Версия для слабовидящих"){
 		$_SESSION['template'] = 2;
@@ -398,12 +393,32 @@ if(isset($_SESSION['ssize'])){
 	 }
 	 #side-navi .current_page_item a{
 		 color:black;
+		 -webkit-box-shadow: none !important;
+	 }
+	 #side-navi .current_page_item{
+		 box-shadow: none !important;
 	 }
 	 #side-navi div{
 		 border-top: 4px solid #000000;
 	 }
 	 a{
 	 	color:black;
+	 }
+	 #access ul ul :hover > a, #access a:focus{
+		 background: black !important;
+		 color: #fff !important;
+	 }
+	 #access ul ul a{
+		 color:black !important;
+	 }
+	 #access .menu a{
+		 	grayscale(100%);
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-ms-filter: grayscale(100%);
+	-o-filter: grayscale(100%);
+	filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+	filter: grayscale(100%);
 	 }
 	',
 	1 => '',
